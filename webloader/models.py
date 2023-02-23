@@ -10,11 +10,11 @@ class Url(BaseModel):
     link: str
 
     @property
-    def site(self):
+    def site(self) -> str:
         return urlparse(self.link).netloc
 
     @validator("link")
-    def valid_url(cls, value):
+    def valid_url(cls, value: str) -> str:
         try:
             _ = urlparse(value)
         except ValueError as err:

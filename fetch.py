@@ -1,3 +1,4 @@
+""" Fetchs webpage to local """
 from __future__ import annotations
 
 import os
@@ -16,6 +17,14 @@ def load_web(
     path: Union[str, os.PathLike],
     archive_assets: bool,
 ):
+    """
+    Loads Webpage to local disk
+    Args:
+        url (str): URL of Webpage
+        metadata (bool): Metadata of loaded webpage
+        path (Union[str, os.PathLike]): Path where we want to save the html file
+        archive_assets (bool): Saves assets if True else False
+    """
     try:
         webloader = WebLoader(url)
         webloader.save_webpage(path=path)
