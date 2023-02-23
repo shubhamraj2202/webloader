@@ -25,3 +25,8 @@ https://pypi.org/project/webloader/
 Run command:    `pip intall webloader`  
 Run command:    `fetch <url 1> <url 2> <url N> --metadata --archive_assets`  
 Sample command: `fetch --metadata --archive_assets https://www.google.com/`  
+
+# Execute using Docker
+Run command: `docker image build -t fetch .`  
+Run command: `docker run fetch <url 1> <url 2> <url N> --metadata --archive_asset`  
+Sample command: `docker run fetch --metadata https://www.google.com/`  
